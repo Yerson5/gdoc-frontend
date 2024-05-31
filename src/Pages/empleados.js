@@ -4,6 +4,7 @@ import Axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
 import imagenGeDOC from '../Images/GeDOC.jpeg';
+import { contextType } from 'react-bootstrap/lib/Accordion';
 
 function Empleados() {
 
@@ -17,6 +18,10 @@ function Empleados() {
     const [editar,setEditar] = useState(false);
   
     const [empleadosList, setEmpleados] = useState([]);
+
+    const headers = {
+      'Content-Type': 'application/json',
+    }
        
     const add = ()=>{
       Axios.post("http://18.226.222.188:3001/create",{
@@ -25,6 +30,8 @@ function Empleados() {
         pais:pais,
         cargo:cargo,
         anios:anios
+      }, {
+        headers: headers
       }).then(()=>{
         getEmpleados();
         limpiarCampos();
