@@ -19,7 +19,7 @@ function Empleados() {
     const [empleadosList, setEmpleados] = useState([]);
        
     const add = ()=>{
-      Axios.post("http://localhost:3001/create",{
+      Axios.post("http://18.226.222.188:3001/create",{
         nombre:nombre,
         edad:edad,
         pais:pais,
@@ -42,7 +42,7 @@ function Empleados() {
   
   
     const update = ()=>{
-      Axios.put("http://localhost:3001/update",{
+      Axios.put("http://18.226.222.188:3001/update",{
         id:id,
         nombre:nombre,
         edad:edad,
@@ -64,7 +64,7 @@ function Empleados() {
     }   
   
     const deleteEmple = (id)=>{
-      Axios.delete(`http://localhost:3001/delete/${id}`).then(()=>{
+      Axios.delete(`http://18.226.222.188:3001/delete/${id}`).then(()=>{
         getEmpleados();
         limpiarCampos();
   
@@ -101,7 +101,7 @@ function Empleados() {
   
   
     const getEmpleados = ()=>{
-      Axios.get("http://localhost:3001/empleados").then((response)=>{
+      Axios.get("http://18.226.222.188:3001/empleados").then((response)=>{
         setEmpleados(response.data);
       });
     }
