@@ -4,7 +4,6 @@ import Axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
 import imagenGeDOC from '../Images/GeDOC.jpeg';
-import { contextType } from 'react-bootstrap/lib/Accordion';
 
 function Empleados() {
 
