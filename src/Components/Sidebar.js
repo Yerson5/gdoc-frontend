@@ -23,7 +23,7 @@ export default function SideBar({ sidebarOpen, setSidebarOpen }) {
           <img src={logo} alt="imagen"/>
         </div>
         <h2>
-          Gestion Documental
+          Gestion Documental de colombia SAS
         </h2>
       </div>
 
